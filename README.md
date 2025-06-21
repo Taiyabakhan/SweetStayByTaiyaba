@@ -51,7 +51,7 @@ Here are some screenshots of my Project - IRCTC-CLONE:
 ![image](https://github.com/Taiyabakhan/SweetStayByTaiyaba/blob/main/Screenshots/Screenshot%20(265).png)
 
 - Login Page 
-![image](https://github.com/Taiyabakhan/IRCTC-CLONE-/blob/main/Screenshots/Screenshot%20(260).png)
+![image](https://github.com/Taiyabakhan/SweetStayByTaiyaba/blob/main/Screenshots/Screenshot%20(266).png)
 
 - After Logging-in Page 
 ![image](https://github.com/Taiyabakhan/SweetStayByTaiyaba/blob/main/Screenshots/Screenshot%20(267).png)
