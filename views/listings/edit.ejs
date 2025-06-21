@@ -1,0 +1,112 @@
+<% layout("/layouts/boilerplate")%>
+<style>
+    body {
+        background-color: #f8f9fa; /* Light background color */
+        font-family: 'Arial', sans-serif; /* Modern font */
+    }
+
+    .edit-listing-container {
+        background-color: #ffffff; /* White background for the form */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 2rem; /* Padding around the form */
+        margin-top: 5rem; /* Space from the top */
+    }
+
+    h3 {
+        margin-bottom: 1.5rem; /* Space below the heading */
+        color: #333; /* Darker text color */
+    }
+
+    .form-control {
+        border-radius: 5px; /* Rounded input fields */
+        transition: border-color 0.3s; /* Smooth transition for border color */
+    }
+
+    .form-control:focus {
+        border-color: #007bff; /* Change border color on focus */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
+    }
+
+    .btn-dark {
+        background: linear-gradient(90deg, #343a40, #495057); /* Gradient background */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded button */
+        transition: background 0.3s; /* Smooth transition for background */
+    }
+
+    .btn-dark:hover {
+        background: linear-gradient(90deg, #495057, #343a40); /* Darker gradient on hover */
+    }
+
+    .invalid-feedback {
+        font-size: 0.9rem; /* Slightly larger font for feedback */
+        color: #dc3545; /* Bootstrap danger color */
+    }
+
+    .valid-feedback {
+        font-size: 0.9rem; /* Slightly larger font for feedback */
+        color: #28a745; /* Bootstrap success color */
+    }
+
+    .image-preview {
+        max-width: 100%; /* Responsive image */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px; /* Rounded corners for the image */
+        margin-bottom: 1rem; /* Space below the image */
+    }
+</style>
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+    <h3>Edit The Listing</h3>
+<form class="needs-validation" method="post" action="/listings/<%= l._id %>?_method=PUT" novalidate enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="title" class="form-label">Edit Listing Title</label>
+        <input type="text" name="listing[title]" class="form-control" required value="<%=l.title%>">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Please Enter the title 
+          </div> 
+    </div>
+    <div class="valid-feedback">
+        Looks good!
+      </div>
+    <div class="mb-3"> 
+        <label for="description" class="form-label">Edit Description</label>
+        <textarea name="listing[description]" class="form-control"><%= l.description %></textarea>
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Please Enter the Description
+          </div> 
+    </div>
+    <div class="mb-3">
+        <p>Original Image</p>
+        <img src="<%=orgimgurl%>" height="500px" width="500px">
+    </div>
+    <div class="mb-3">
+        <label for="image-url" class="form-label" >Edit Image</label>
+        <input type="file" name="listing[image]" class="form-control" >
+    </div> 
+    <div class="mb-3">
+        <label for="price" class="form-label">Edit Price (in ₹)</label>
+        <input type="number" name="listing[price]" class="form-control" required value="<%=l.price%>">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Please Enter the Price
+          </div> 
+    </div>
+    <div class="mb-3">
+        <label for="location" class="form-label">Edit Property Location</label>
+        <input type="text" name="listing[location]" class="form-control" required value="<%=l.location%>">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Please Enter the Loaction
+          </div> 
+    </div>
+    <div class="mb-3">
+        <label for="country" class="form-label">Edit Country</label>
+        <input type="text" name="listing[country]" class="form-control" required value="<%=l.country%>">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Please Enter the Country Name
+          </div> 
+    </div>
+    <button class="btn btn-dark mt-3 mb-3 edit-btn">Save Changes</button>
+</form>
+</div>
+</div>

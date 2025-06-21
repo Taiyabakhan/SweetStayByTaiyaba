@@ -1,0 +1,197 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height:100vh ;
+}
+.container{
+    flex: 1;
+}
+
+/* NAVBAR STYLEING */
+.navbar{
+    height:5rem;
+    background-color: white;
+}
+.fa-compass{
+    color:#fe424d;
+    font-size:2rem;
+}
+.nav-link{
+    color:#222222;
+}
+/* FOOTER STYLING  */
+.finfolinks a{
+    text-decoration: none;
+    color:#222222;
+}
+.finfolinks a:hover { 
+    text-decoration: underline;
+}
+.finfolinks,.finfosocials,.finfobrand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.finfosocials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.finfo{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* CARDS STYLING */
+.card{
+    border:none !important;
+    margin-bottom: 2rem;
+    ransition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+.listingslink{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+/* SHOW PAGE */
+.show-img{
+    height: 30vh;
+}
+.btns{
+    display: flex;
+}
+/* REVIEW SECTION STYLES */
+.review-section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Light border to match card styling */
+    border-radius: 8px; /* Slightly larger radius for a softer look */
+    background-color: #fefefe; /* Light background for contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.review-section h4 {
+    margin-bottom: 15px;
+    font-size: 1.5rem; /* Slightly larger font size for the heading */
+    color: #222; /* Dark color for better readability */
+}
+
+.review-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* Darker label color for contrast */
+}
+
+.review-section input[type="range"] {
+    width: 100%;
+    margin-bottom: 15px;
+    background: #ddd; /* Background for the track */
+    height: 5px; /* Height of the track */
+    border-radius: 5px; /* Rounded track */
+}
+
+.review-section input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    width: 20px; /* Width of the thumb */
+    height: 20px; /* Height of the thumb */
+    border-radius: 50%; /* Circular thumb */
+    background: #007bff; /* Color of the thumb */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.review-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    resize: vertical; /* Allows vertical resizing */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+.review-section button {
+    background-color:black; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.review-section button:hover {
+    background-color:darkgrey; /* Darker shade on hover */
+}
+/* REVIEW RATING */
+.reviews-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.review-item {
+    background-color: #f8f9fa; /* Light background for each review */
+    border: 1px solid #dee2e6; /* Border around each review */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding inside each review */
+    margin-bottom: 1rem; /* Space between reviews (Bootstrap's default spacing) */
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column; /* Stack comment and rating vertically */
+}
+
+.review-comment {
+    font-size: 1.1em; /* Slightly larger font for comments */
+    margin: 0; /* Remove default margin */
+}
+
+.review-rating {
+    margin-top: 0.5rem; /* Space above rating (Bootstrap's default spacing) */
+}
+
+.star {
+    font-size: 1.5rem; /* Size of the stars (Bootstrap's rem unit for better scaling) */
+    color: lightgray; /* Default color for unfilled stars */
+}
+
+.star.text-warning {
+    color: gold; /* Color for filled stars using Bootstrap's text-warning class */
+}
+
+.star.text-muted {
+    color: lightgray; /* Color for unfilled stars using Bootstrap's text-muted class */
+}
+/* MAP STYLING */
+
+#map {
+    height: 400px;
+    width: 80vh; /* Width set to 80vh */
+    margin: 0 auto; /* Center the map horizontally */
+    display: block; /* Ensure it's treated as a block element */
+}

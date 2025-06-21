@@ -1,0 +1,70 @@
+<% layout("/layouts/boilerplate") %>
+<style>
+    body {
+        background-color: #f8f9fa; /* Light background color */
+        font-family: 'Arial', sans-serif; /* Modern font */
+    }
+
+    .login-container {
+        background-color: #ffffff; /* White background for the form */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 2rem; /* Padding around the form */
+        margin-top: 5rem; /* Space from the top */
+    }
+
+    h3 {
+        margin-bottom: 1.5rem; /* Space below the heading */
+        color: #333; /* Darker text color */
+    }
+
+    .form-control {
+        border-radius: 5px; /* Rounded input fields */
+        transition: border-color 0.3s; /* Smooth transition for border color */
+    }
+
+    .form-control:focus {
+        border-color: #007bff; /* Change border color on focus */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
+    }
+
+    .btn-dark {
+        background: linear-gradient(90deg, #343a40, #495057); /* Gradient background */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded button */
+        transition: background 0.3s; /* Smooth transition for background */
+    }
+
+    .btn-dark:hover {
+        background: linear-gradient(90deg, #495057, #343a40); /* Darker gradient on hover */
+    }
+
+    .invalid-feedback {
+        font-size: 0.9rem; /* Slightly larger font for feedback */
+        color: #dc3545; /* Bootstrap danger color */
+    }
+</style>
+
+<div class="row ">
+    <div class="col-8 offset-2 login-container">
+        <h3>Login to the SweetStay by Taiyaba</h3>
+        <form class="needs-validation" method="post" action="/login" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" id="username" required placeholder="Enter your username">
+                <div class="invalid-feedback">
+                    Please enter your username.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="password" required placeholder="Enter your password">
+                <div class="invalid-feedback">
+                    Please enter your password.
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-dark mt-3 mb-3">Login</button>
+        </form>
+    </div>
+</div>
