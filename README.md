@@ -42,7 +42,7 @@
 
 ## GETTING INTO THE PROJECT:
 
-Here are some screenshots of my Project - IRCTC-CLONE:
+Here are some screenshots of my Project :
 
 - Home page
 ![image](https://github.com/Taiyabakhan/SweetStayByTaiyaba/blob/main/Screenshots/Screenshot%20(264).png)
